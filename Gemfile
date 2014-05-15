@@ -20,7 +20,7 @@ group :assets do
   gem 'coffee-rails', '~> 4.0.0'
 end
 
-gem 'sqlite3', '1.3.5'
+gem 'sqlite3'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
