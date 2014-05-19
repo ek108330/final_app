@@ -16,8 +16,8 @@ it "should have a Help page at '/help'" do
 get '/help'
 response.body.should include 'Help</title>'
 end
-#it "should have a signup page at '/signup'" do
-#get '/signup'
-#response.body.should include 'Sign up</title>'
-#end
+it "should have a signup page at '/signup'" do
+get '/signup'
+response.body.should include 'Sign up</title>'
+end
 end

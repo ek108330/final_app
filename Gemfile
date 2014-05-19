@@ -8,7 +8,9 @@ gem 'pg', "~> 0.17.1"
 
 group :development do
   # pour les tests
+  gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.14.1'
+  #gem 'annotate'
   end
 
 group :assets do
@@ -20,7 +22,7 @@ group :assets do
   gem 'coffee-rails', '~> 4.0.0'
 end
 
-gem 'sqlite3'
+#gem 'sqlite3'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
