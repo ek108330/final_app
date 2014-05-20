@@ -105,10 +105,6 @@ a.signup_button{
 		background:-webkit-linear-gradient(top, #d1d1d1 0%,#ECECEC 100%);
 	}
 
-
-
-
-
 /* Round corners */
 .round {
 -moz-border-radius:
@@ -127,4 +123,25 @@ margin-right: auto;
 }
 footer nav {
 float: none;
+}
+
+
+/* User show page */
+table.profile {
+width: 100%;
+margin-bottom: 0;
+}
+td.main {
+width: 70%;
+padding: 1em;
+}
+td.sidebar {
+width: 30%;
+padding: 1em;
+vertical-align: top;
+background: #ffc;
+}
+.profile img.gravatar {
+border: 1px solid #999;
+margin-bottom: -15px;
 }

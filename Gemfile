@@ -1,16 +1,19 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.2'
+gem 'rails', '4.0.3'
+gem 'gravatar_image_tag', '0.1.0'
 
 # Attention a la version ici!
 gem 'pg', "~> 0.17.1"
+gem 'protected_attributes'
+gem 'capybara'
 
 group :development do
   # pour les tests
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.14.1'
-  #gem 'annotate'
+  gem 'annotate', '2.5.0'
   end
 
 group :assets do
@@ -22,6 +25,9 @@ group :assets do
   gem 'coffee-rails', '~> 4.0.0'
 end
 
+group :test do
+  gem 'factory_girl_rails', '1.0'
+end
 #gem 'sqlite3'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
