@@ -1,11 +1,9 @@
 FinalApp::Application.routes.draw do
   resources :users
-  get '/signup', :to => 'users#new'
 
   root :to => 'pages#home'
 
   get "users/new"
-  
   get '/signup', :to => 'users#new'
   get '/contact', :to => 'pages#contact'
   get '/about', :to => 'pages#about'
