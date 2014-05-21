@@ -1,4 +1,5 @@
 FinalApp::Application.routes.draw do
+  get "sessions/new"
   resources :users
 
   root :to => 'pages#home'
@@ -8,6 +9,10 @@ FinalApp::Application.routes.draw do
   get '/contact', :to => 'pages#contact'
   get '/about', :to => 'pages#about'
   get '/help', :to => 'pages#help'
+
+  resources :sessions, :only => [:new, :create, :destroy]
+  get '/signin', :to => 'sessions#new'
+  get '/signout', :to => 'sessions#destroy'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
