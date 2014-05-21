@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 gem 'gravatar_image_tag', '0.1.0'
+gem 'will_paginate', '~> 3.0.5'
 
 # Attention a la version ici!
 gem 'pg', "~> 0.17.1"
@@ -14,6 +15,7 @@ group :development do
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.14.1'
   gem 'annotate', '2.5.0'
+  gem 'faker', '0.3.1'
   end
 
 group :assets do

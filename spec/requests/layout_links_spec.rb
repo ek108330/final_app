@@ -28,6 +28,8 @@ describe "LayoutLinks" do
 			#response.should have_selector("a", :href => signin_path, :content => "Sign in")
 			#get :show, :id => @user
 			#response.body.should include '<a href="/signin">Sign in</a>'
+			#Capybara.string(page.body).has_selector?('li', text: 'Sign in</a>')
+			#expect(page).to have_selector('li', text: 'Sign in</a>')
 
 		end
 	end
@@ -35,21 +37,25 @@ describe "LayoutLinks" do
 		before(:each) do
 			@user = Factory(:user)
 			visit signin_path
-			fill_in :email, :with => @user.email
-			fill_in :password, :with => @user.password
-			click_button
+			fill_in :session_email, :with => @user.email
+			fill_in :session_password, :with => @user.password
+			click_button "Sign in"
 		end
 		it "should have a signout link" do
 			visit root_path
 			#response.should have_selector("a", :href => signout_path, :content => "Sign out")
 			#get :show, :id => @user
 			#response.body.should include 'Sign out</a>'
+			#expect(page).to have_selector('li', text: 'Sign out</a>')
+			#Capybara.string(page.body).has_selector?('li', text: 'Sign out</a>')
 		end
 		it "should have a profile link" do
 			visit root_path
 			#response.should have_selector("a", :href => user_path(@user), :content => "Profile")
 			#get :show, :id => @user
 			#response.body.should include '<a href="/users/'+@user.id+'">Profile</a>'
+			#expect(page).to have_selector('li', text: 'Profile</a>')
+			#Capybara.string(page.body).has_selector?('li', text: 'Profile</a>')
 		end
 	end
 end
