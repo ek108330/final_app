@@ -1,7 +1,8 @@
 FinalApp::Application.routes.draw do
   get "sessions/new"
   resources :users
-
+  resources :microposts, :only => [:create, :destroy]
+  
   root :to => 'pages#home'
 
   get "users/new"

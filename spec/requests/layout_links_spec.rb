@@ -33,6 +33,7 @@ describe "LayoutLinks" do
 
 		end
 	end
+	
 	describe "when signed in" do
 		before(:each) do
 			@user = Factory(:user)
